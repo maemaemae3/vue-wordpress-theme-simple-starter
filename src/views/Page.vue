@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import Loader from '@/components/Loader.vue';
 import { mapGetters } from 'vuex';
 
 export default {
@@ -16,13 +15,9 @@ export default {
     ...mapGetters({
       page: 'page/page',
     }),
-    pageContent() {
+    pageContent () {
       return this.page(this.$route.params.pageSlug);
     },
-  },
-
-  components: {
-    Loader,
   },
 };
 </script>

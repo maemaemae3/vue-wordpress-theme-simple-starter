@@ -7,7 +7,7 @@ const createPostSlug = post => {
 };
 
 const createPostUtcDate = post => {
-  post.date_utc = post.date_gmt + "Z";
+  post.date_utc = post.date_gmt + 'Z';
   return post;
 };
 
@@ -24,11 +24,11 @@ const getters = {
     if (
       !limit ||
       !Number.isInteger(limit) ||
-      typeof limit == 'undefined'
+      typeof limit === 'undefined'
     ) {
       return state.recent;
     }
-    let recent = state.recent;
+    const recent = state.recent;
     return recent.slice(0, limit);
   },
 
@@ -37,7 +37,7 @@ const getters = {
 
 // actions
 const actions = {
-  getPosts({ commit }, { limit }) {
+  getPosts ({ commit }, { limit }) {
     api.getPosts(limit, posts => {
       posts.map((post, i) => {
         posts[i] = createPostSlug(post);

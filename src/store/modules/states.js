@@ -10,7 +10,7 @@ const getters = {
 
 // actions
 const actions = {
-  setLoading({ commit }, payload) {
+  setLoading ({ commit }, payload) {
     commit('setIsLoading', payload);
   }
 };

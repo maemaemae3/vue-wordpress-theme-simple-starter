@@ -39,7 +39,7 @@
 import { mapGetters } from 'vuex';
 
 export default {
-  data() {
+  data () {
     return {
       limit: 3,
     };
@@ -50,7 +50,7 @@ export default {
       recentPostsLoaded: 'post/recentPostsLoaded',
     }),
   },
-  mounted() {
+  mounted () {
     this.$store.dispatch('post/getPosts', { limit: this.limit });
   },
 }

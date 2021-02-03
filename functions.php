@@ -1,4 +1,6 @@
 <?php
+add_theme_support('title-tag');
+
 // Remove all default WP template redirects/lookups
 remove_action( 'template_redirect', 'redirect_canonical' );
 

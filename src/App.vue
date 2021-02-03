@@ -43,7 +43,7 @@ export default {
   components: {
     Loader,
   },
-  data() {
+  data () {
     return {
       showLoader: true,
       drawer: false,
@@ -58,7 +58,7 @@ export default {
       categoriesLoaded: 'category/loaded',
     }),
 
-    menu() {
+    menu () {
       const recentPages = this.recentPages(3);
       if (recentPages) {
         return recentPages.map(e => ({
@@ -72,7 +72,7 @@ export default {
       return this.pagesLoaded && this.categoriesLoaded;
     },
   },
-  created() {
+  created () {
     this.$store.dispatch('category/getAllCategories');
     this.$store.dispatch('page/getAllPages');
   },

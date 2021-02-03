@@ -1,4 +1,4 @@
-const SETTINGS = require( './settings');
+const SETTINGS = require('./settings');
 
 const webpackPlugins = [];
 if (process.env.NODE_ENV === 'development') {
@@ -27,8 +27,8 @@ module.exports = {
   productionSourceMap: false,
   configureWebpack: {
     output: {
-      filename: `scripts/[name].js`,
-      chunkFilename: `scripts/[name].js`,
+      filename: 'scripts/[name].js',
+      chunkFilename: 'scripts/[name].js',
     },
     optimization: {
       splitChunks: false

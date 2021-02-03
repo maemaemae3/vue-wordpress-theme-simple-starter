@@ -12,13 +12,13 @@ const getters = {
   loaded: state => state.loaded,
   allPages: state => state.all,
   page: state => id => {
-    let field = typeof id === 'number' ? 'id' : 'slug';
-    let page = state.all.filter(page => page[field] === id);
+    const field = typeof id === 'number' ? 'id' : 'slug';
+    const page = state.all.filter(page => page[field] === id);
     return (page[0]) ? page[0] : false;
   },
   pageContent: state => id => {
-    let field = typeof id === 'number' ? 'id' : 'slug';
-    let page = state.all.filter(page => page[field] === id);
+    const field = typeof id === 'number' ? 'id' : 'slug';
+    const page = state.all.filter(page => page[field] === id);
 
     return (page[0]) ? page[0].content.rendered : false;
   },
@@ -26,7 +26,7 @@ const getters = {
     if (state.all.length < 1) {
       return false;
     }
-    let all = [...state.all];
+    const all = [...state.all];
     return all.splice(0, Math.min(limit, state.all.length));
   },
 };

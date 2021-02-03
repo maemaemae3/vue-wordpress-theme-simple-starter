@@ -2,7 +2,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = new BrowserSyncPlugin({
   files: ['*.php', 'dist'],
-  logLevel: "silent",
+  logLevel: 'silent',
   reloadDelay: 0,
   notify: {
     styles: {
