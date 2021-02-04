@@ -19,5 +19,11 @@ export default {
       return this.page(this.$route.params.pageSlug);
     },
   },
+
+  metaInfo () {
+    return {
+      title: this.pageContent ? `${this.pageContent.title.rendered} | ${this.pageContent.site_title}` : '',
+    }
+  },
 };
 </script>

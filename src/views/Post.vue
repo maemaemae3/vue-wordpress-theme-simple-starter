@@ -16,12 +16,14 @@ import SETTINGS from '../../settings';
 export default {
   data () {
     return {
-      post: false
+      post: null
     };
   },
 
-  computed: {
-
+  metaInfo () {
+    return {
+      title: this.post ? `${this.post.title.rendered} | ${this.post.site_title}` : '',
+    }
   },
 
   beforeMount () {
@@ -32,6 +34,7 @@ export default {
     async getPost () {
       const uri = SETTINGS.API_BASE_PATH + 'posts?slug=' + this.$route.params.postSlug;
       const response = await axios.get(uri);
+      if (!response.data.length) { this.$store.dispatch('states/setIsNotFound', true); }
       this.post = response.data[0];
     }
   },

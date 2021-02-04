@@ -56,7 +56,7 @@
       <h2>Show loading screen</h2>
       <p>
         Loading screen is builtin in this theme!<br/>
-        You can use <span class="code">this.$store.dispatch('states/setLoading', true);</span><br/>
+        You can use <span class="code">this.$store.dispatch('states/setIsLoading', true);</span><br/>
         To show loading screen, and set <span class="code">false</span> to remove it.
       </p>
     </section>
