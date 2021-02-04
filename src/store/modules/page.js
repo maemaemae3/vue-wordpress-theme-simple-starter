@@ -14,7 +14,7 @@ const getters = {
   page: state => id => {
     const field = typeof id === 'number' ? 'id' : 'slug';
     const page = state.all.filter(page => page[field] === id);
-    return (page[0]) ? page[0] : false;
+    return (page[0]) ? page[0] : null;
   },
   pageContent: state => id => {
     const field = typeof id === 'number' ? 'id' : 'slug';
@@ -24,7 +24,7 @@ const getters = {
   },
   recentPages: state => limit => {
     if (state.all.length < 1) {
-      return false;
+      return null;
     }
     const all = [...state.all];
     return all.splice(0, Math.min(limit, state.all.length));

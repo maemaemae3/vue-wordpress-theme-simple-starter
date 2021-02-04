@@ -1,6 +1,6 @@
 // initial state
 const state = {
-  loading: false
+  loading: false,
 };
 
 // getters
@@ -10,16 +10,16 @@ const getters = {
 
 // actions
 const actions = {
-  setLoading ({ commit }, payload) {
+  setIsLoading ({ commit }, payload) {
     commit('setIsLoading', payload);
-  }
+  },
 };
 
 // mutations
 const mutations = {
   setIsLoading (state, value) {
     state.loading = value;
-  }
+  },
 };
 
 export default {

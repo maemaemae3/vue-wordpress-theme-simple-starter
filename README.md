@@ -26,11 +26,12 @@ This theme is inspired and forked from [VueWordPress Theme Starter](https://gith
 0. make your local wordpress environment.  
 there are many tools like [local](https://localwp.com/?download), [bitnami](https://bitnami.com/stack/wordpress/installer), XAMPP, and so on.
 
-1. Clone the repo inside to your `wp-content/themes/` directory
-2. **Navigate to the theme directory in your terminal** and run `npm install`
-3. run `npm run watch` for development/hot reloading
-4. Activate the theme in your WordPress settings.
-5. Update your permalink settings `(Settings -> Permalinks)` to be **"Day and name"**.  
+1. Clone the repo inside to your `wp-content/themes/` directory.  
+If you want to change directory name, please edit `THEME_DIRECTORY_NAME` of `settings.js`.
+3. **Navigate to the theme directory in your terminal** and run `npm install`
+4. run `npm run watch` for development/hot reloading
+5. Activate the theme in your WordPress settings.
+6. Update your permalink settings `(Settings -> Permalinks)` to be **"Day and name"**.  
 You can change settings by editing `router/index.js`.
 
 6. when website is ready for deployment, run `npm run build` and deploy `theme-dir` to your `wp-content/themes/` directory in your server.  

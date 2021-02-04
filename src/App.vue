@@ -9,7 +9,7 @@
           </router-link>
           <v-spacer></v-spacer>
           <v-toolbar-items class="hidden-sm-and-down">
-            <v-btn text to="about">about</v-btn>
+            <v-btn text to="/about">about</v-btn>
             <v-btn text v-for="item in menu" :key="item.icon" :to="item.link">{{ item.title }}</v-btn>
           </v-toolbar-items>
         </v-app-bar>
@@ -27,7 +27,7 @@
             <Loader v-if="isLoading || !initialDataLoaded"/>
           </transition>
           <div id="contents">
-            <router-view></router-view>
+            <router-view/>
           </div>
         </v-container>
       </v-main>
@@ -43,26 +43,28 @@ export default {
   components: {
     Loader,
   },
+
   data () {
     return {
       showLoader: true,
       drawer: false,
     };
   },
+
   computed: {
     ...mapGetters({
+      isNotFound: 'states/isNotFound',
       isLoading: 'states/isLoading',
       recentPages: 'page/recentPages',
       categories: 'category/allCategories',
       pagesLoaded: 'page/loaded',
       categoriesLoaded: 'category/loaded',
     }),
-
     menu () {
       const recentPages = this.recentPages(3);
       if (recentPages) {
         return recentPages.map(e => ({
-          link: e.slug,
+          link: `/${e.slug}`,
           title: e.title.rendered,
         }));
       }
@@ -72,6 +74,7 @@ export default {
       return this.pagesLoaded && this.categoriesLoaded;
     },
   },
+
   created () {
     this.$store.dispatch('category/getAllCategories');
     this.$store.dispatch('page/getAllPages');

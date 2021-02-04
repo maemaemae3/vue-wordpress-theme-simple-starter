@@ -24,7 +24,8 @@
 0. ローカル環境の構築  
 [local](https://localwp.com/?download)、[bitnami](https://bitnami.com/stack/wordpress/installer)、XAMPP等好きなものをご使用下さい
 
-1. このリポジトリを `wp-content/themes/` ディレクトリにクローン
+1. このリポジトリを `wp-content/themes/` ディレクトリにクローン  
+ディレクトリ名を変更する場合、`settings.js` の `THEME_DIRECTORY_NAME` の値を変更して下さい。
 2. **端末でクローンしたディレクトリに移動し、** `npm install`
 3. `npm run watch` を実行し、ホットリロードを有効にした状態でビルドを行います
 4. WordPressの設定にて、該当テーマを有効にします
