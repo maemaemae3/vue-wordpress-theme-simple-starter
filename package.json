@@ -1,6 +1,6 @@
 {
   "name": "vue-wordpress-theme-simple-starter",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "private": true,
   "scripts": {
     "build": "NODE_ENV=production vue-cli-service build;node scripts/build-production-data.js",
