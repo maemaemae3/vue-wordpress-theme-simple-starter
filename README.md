@@ -15,6 +15,7 @@ This theme is inspired and forked from [VueWordPress Theme Starter](https://gith
 
 ## features
 - Hot reloading(using [browsersync](https://browsersync.io)) for local development
+- Written in[TypeScript](https://www.typescriptlang.org)
 - [Pinia](https://pinia.vuejs.org) for state management
 - [vue-meta](https://vue-meta.nuxtjs.org) for SEO
 - [Axios](https://github.com/axios/axios) for API requests

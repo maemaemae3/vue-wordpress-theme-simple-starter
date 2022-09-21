@@ -12,6 +12,7 @@
 このテーマは [VueWordPress Theme Starter](https://github.com/EvanAgee/vuejs-wordpress-theme-starter) のフォークです。こちらを元に各種パッケージのバージョンアップ、改善を行っています。
 
 ## 各種機能
+- V0.9.X から [TypeScript](https://www.typescriptlang.org) で全面的に書き直しています
 - [browsersync](https://browsersync.io)を使用した開発環境でのホットリロード
 - [Vue Router](https://router.vuejs.org)
 - [vue-meta](https://vue-meta.nuxtjs.org)
