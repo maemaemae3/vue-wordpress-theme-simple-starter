@@ -1,7 +1,8 @@
 module.exports = {
   files: ['*.php', 'dist'],
   logLevel: 'silent',
-  reloadDelay: 0,
+  port: 30801,
+  reloadDelay: 1,
   notify: {
     styles: {
       top: 'auto',
