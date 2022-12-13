@@ -27,11 +27,11 @@
 
 1. このリポジトリを `wp-content/themes/` ディレクトリにクローン  
 ディレクトリ名を変更する場合、`settings.js` の `THEME_DIRECTORY_NAME` の値を変更して下さい。
-2. `npm install`  
+2. `npm ci`  
 3. [`.env.sample`](.env.sample) を `.env` にコピーし、ファイルを編集して下さい。  
 `VITE_WEBSITE_NAME` はサイトのtitle属性などに使用されます。  
 ビルドされるファイル名を変更したい場合は、`THEME_DIRECTORY_NAME`の値を変更して下さい。  
-4. `npm run watch` を実行し、ホットリロードを有効にした状態でビルドを行います
+4. `npm run dev` を実行し、ホットリロードを有効にした状態でビルドを行います
 5. WordPressの設定にて、該当テーマを有効にします
 6. パーマリンク設定 `(設定 -> パーマリンク)` を **"日付と投稿名"** に変更します  
 パーマリンク設定を変更したい場合は `router/index.js` を編集して下さい。
