@@ -1,6 +1,6 @@
 {
   "name": "vue-wordpress-theme-simple-starter",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "scripts": {
     "dev": "npx browser-sync start --config bs-config.js & vite build --watch",
     "build": "vite build && node scripts/build-production-data.js",
